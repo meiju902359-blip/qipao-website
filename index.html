@@ -122,6 +122,20 @@
       .step img { height: 150px; }
       .boutique img { height: 250px; }
     }
+
+    /* 首頁主視覺改用已上傳的完整裁切圖片 */
+    .hero {
+      width: 100%;
+      min-height: 0 !important;
+      aspect-ratio: 1774 / 578;
+      background-image: url("qipao-middle-banner.png") !important;
+      background-size: 100% 100% !important;
+      background-position: center !important;
+    }
+    .hero-copy, .hero-photo { display: none !important; }
+    @media (max-width: 560px) {
+      .hero { min-height: 0 !important; }
+    }
   </style>
 </head>
 <body>
