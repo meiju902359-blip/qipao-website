@@ -66,6 +66,8 @@
     .section { padding: 70px 6%; max-width: 1400px; margin: auto; }
     .section-heading { text-align: center; margin-bottom: 34px; }
     .section-heading h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: .12em; color: var(--rose-deep); margin-bottom: 4px; }
+    /* 點選「旗袍作品」時，避免標題被固定在上方的導覽列遮住 */
+    #collection { scroll-margin-top: 135px; }
     .section-heading p { color: var(--muted); }
     .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
     .feature { text-align: center; padding: 22px 12px; border-right: 1px solid var(--line); }
