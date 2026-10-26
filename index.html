@@ -85,14 +85,15 @@
       background-repeat: no-repeat;
       /* 保持原圖比例，避免旗袍人物被拉長或壓扁 */
       background-size: 400% auto;
-      background-position-y: 50%;
+      /* 從圖片頂端開始取景，避免人物頭部被裁掉 */
+      background-position-y: 0%;
     }
     .collection-photo.photo-1 { background-position-x: 0%; }
     .collection-photo.photo-2 {
-      /* 第二張單獨放大裁切，減少右側帶入第三張照片的綠色背景 */
-      background-size: 450% auto;
-      background-position-x: 36%;
-      background-position-y: 50%;
+      /* 第二張與其他照片使用相同縮放比例，避免放大後切到頭部 */
+      background-size: 400% auto;
+      background-position-x: 33.333%;
+      background-position-y: 0%;
     }
     .collection-photo.photo-3 { background-position-x: 66.667%; }
     .collection-photo.photo-4 { background-position-x: 100%; }
