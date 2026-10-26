@@ -3,176 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="旗袍雅集，結合東方服飾美學與細膩訂製工藝，為每一位女性打造專屬優雅。">
   <title>旗袍雅集｜東方服飾美學</title>
-
   <style>
+    :root {
+      --rose: #a75d69;
+      --rose-deep: #82434f;
+      --dusty: #d8afb0;
+      --pale: #f8eeee;
+      --cream: #fffaf6;
+      --ink: #573d3e;
+      --muted: #8c7372;
+      --line: #ead4d1;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "Microsoft JhengHei", sans-serif;
-      background: #fffaf5;
-      color: #4b2929;
-    }
-
-    header {
-      background: #7b263a;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      letter-spacing: 5px;
-    }
-
-    nav {
-      background: #f0dfd4;
-      text-align: center;
-      padding: 15px;
-    }
-
-    nav a {
-      color: #7b263a;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 65px 20px;
-      background: #f8e8e1;
-    }
-
-    .hero h2 {
-      font-size: 30px;
-    }
-
-    .hero p {
-      line-height: 2;
-    }
-
-    .button {
-      display: inline-block;
-      background: #7b263a;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 15px;
-    }
-
-    section {
-      padding: 35px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .card {
-      background: white;
-      padding: 22px;
-      border: 1px solid #ead4c8;
-      border-radius: 10px;
-      flex: 1 1 220px;
-      box-sizing: border-box;
-    }
-
-    footer {
-      background: #7b263a;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
       line-height: 1.8;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 25px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
-
-      .hero h2 {
-        font-size: 24px;
-      }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { color: inherit; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; padding: 14px 5%;
+      background: rgba(248, 232, 229, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .brand { text-decoration: none; color: var(--rose-deep); }
+    .brand strong { display: block; font-size: 1.55rem; letter-spacing: .18em; line-height: 1.25; }
+    .brand span { display: block; font-family: Georgia, serif; font-size: .65rem; letter-spacing: .22em; }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
+    nav a { text-decoration: none; font-size: .92rem; color: var(--ink); }
+    nav a:hover { color: var(--rose); }
+    .nav-button, .button {
+      display: inline-block; text-decoration: none; border-radius: 999px;
+      background: var(--rose); color: white; padding: 10px 22px;
+      border: 1px solid var(--rose); transition: .2s ease;
+    }
+    .nav-button:hover, .button:hover { background: var(--rose-deep); transform: translateY(-1px); }
+    .hero {
+      min-height: 480px; display: grid; grid-template-columns: 1fr 1fr;
+      background: linear-gradient(110deg, #f7e7e4, #fff8f3);
+    }
+    .hero-photo {
+      min-height: 480px;
+      background:
+        linear-gradient(90deg, rgba(255,250,246,0) 65%, rgba(255,250,246,.35)),
+        url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85") center 35% / cover;
+    }
+    .hero-copy { align-self: center; padding: 55px clamp(25px, 6vw, 90px); }
+    .eyebrow { color: var(--rose); letter-spacing: .24em; font-size: .78rem; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    .hero h1 { font-size: clamp(2.4rem, 4.5vw, 4.4rem); line-height: 1.25; letter-spacing: .12em; color: var(--rose-deep); margin: 12px 0; }
+    .hero p { color: var(--muted); margin-bottom: 26px; }
+    .section { padding: 70px 6%; max-width: 1400px; margin: auto; }
+    .section-heading { text-align: center; margin-bottom: 34px; }
+    .section-heading h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: .12em; color: var(--rose-deep); margin-bottom: 4px; }
+    .section-heading p { color: var(--muted); }
+    .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .feature { text-align: center; padding: 22px 12px; border-right: 1px solid var(--line); }
+    .feature:last-child { border-right: 0; }
+    .feature .icon { font-size: 1.8rem; color: var(--rose); }
+    .feature h3 { color: var(--rose-deep); margin: 6px 0 2px; }
+    .feature p { font-size: .9rem; color: var(--muted); margin: 0; }
+    .soft-bg { background: var(--pale); }
+    .collection { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .collection-card { background: #fffdfb; border: 1px solid var(--line); padding: 10px; }
+    .collection-card img { height: 310px; }
+    .collection-card h3 { text-align: center; color: var(--rose-deep); margin: 12px 0 0; }
+    .collection-card p { text-align: center; color: var(--muted); font-size: .9rem; margin-bottom: 8px; }
+    .fabric-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .fabric-grid img { height: 190px; border-radius: 3px; }
+    .service-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 42px; align-items: center; }
+    .service-layout h2 { color: var(--rose-deep); font-size: 2rem; letter-spacing: .1em; }
+    .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .step { text-align: center; }
+    .step img { height: 130px; border-radius: 4px; margin-bottom: 8px; }
+    .step strong { display: block; color: var(--rose-deep); }
+    .boutique { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #f2dfdc; }
+    .boutique img { height: 350px; }
+    .boutique-copy { padding: 42px 7%; align-self: center; }
+    .boutique-copy h2 { color: var(--rose-deep); font-size: 2rem; }
+    .contact { text-align: center; padding: 48px 20px; background: #f8e9e6; }
+    .contact h2 { color: var(--rose-deep); letter-spacing: .1em; }
+    footer { text-align: center; padding: 24px; background: #d9b3b2; color: #633f43; font-size: .9rem; }
+    @media (max-width: 900px) {
+      .topbar { flex-direction: column; gap: 10px; }
+      nav { gap: 12px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-photo { min-height: 330px; }
+      .hero-copy { text-align: center; }
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .feature:nth-child(2) { border-right: 0; }
+      .collection { grid-template-columns: repeat(2, 1fr); }
+      .fabric-grid { grid-template-columns: repeat(3, 1fr); }
+      .service-layout, .boutique { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .brand strong { font-size: 1.3rem; }
+      nav { gap: 8px 14px; }
+      nav a { font-size: .85rem; }
+      .nav-button { display: none; }
+      .hero-photo { min-height: 260px; }
+      .section { padding: 48px 5%; }
+      .collection { gap: 10px; }
+      .collection-card img { height: 220px; }
+      .fabric-grid { grid-template-columns: repeat(2, 1fr); }
+      .fabric-grid img { height: 145px; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .step img { height: 150px; }
+      .boutique img { height: 250px; }
     }
   </style>
 </head>
-
 <body>
-
-  <header>
-    <h1>旗袍雅集</h1>
-    <p>傳承東方之美・縫製專屬優雅</p>
+  <header class="topbar">
+    <a class="brand" href="#home"><strong>旗袍雅集</strong><span>QIPAO ELEGANCE</span></a>
+    <nav aria-label="主要導覽">
+      <a href="#home">首頁</a>
+      <a href="#about">品牌故事</a>
+      <a href="#collection">旗袍作品</a>
+      <a href="#fabrics">布料介紹</a>
+      <a href="#service">訂製服務</a>
+      <a href="#contact">聯絡我們</a>
+    </nav>
+    <a class="nav-button" href="#contact">預約諮詢</a>
   </header>
 
-  <nav>
-    <a href="#about">品牌介紹</a>
-    <a href="#design">旗袍設計</a>
-    <a href="#service">訂製服務</a>
-  </nav>
-
-  <div class="hero">
-    <h2>一針一線，縫出東方之美</h2>
-    <p>
-      以細膩的剪裁、優雅的線條，<br>
-      展現每一位女性獨特的氣質。
-    </p>
-    <a class="button" href="#service">了解訂製服務</a>
-  </div>
-
-  <section id="about">
-    <h2>品牌介紹</h2>
-    <p>
-      我們結合傳統旗袍工藝與現代服裝設計，
-      從布料挑選、版型設計到細節製作，
-      用專業與用心，打造適合每一位顧客的服裝。
-    </p>
-  </section>
-
-  <section id="design">
-    <h2>旗袍設計</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>典雅傳統</h3>
-        <p>細緻盤扣與經典剪裁，呈現東方韻味。</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo" role="img" aria-label="優雅時尚女性形象"></div>
+      <div class="hero-copy">
+        <div class="eyebrow">Qipao · Elegance · Craft</div>
+        <h1>旗袍雅集</h1>
+        <p>傳承東方之美，訂製專屬於妳的優雅。<br>一針一線，成就獨一無二的東方風華。</p>
+        <a class="button" href="#collection">探索旗袍之美　→</a>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>現代時尚</h3>
-        <p>融合現代線條，展現自然與自信。</p>
+    <section class="section" id="about">
+      <div class="features">
+        <article class="feature"><div class="icon">❀</div><h3>精選布料</h3><p>細緻觸感，典雅花色</p></article>
+        <article class="feature"><div class="icon">✂</div><h3>專業訂製</h3><p>量身設計，合身舒適</p></article>
+        <article class="feature"><div class="icon">♧</div><h3>多元款式</h3><p>傳統典雅，現代時尚</p></article>
+        <article class="feature"><div class="icon">♡</div><h3>貼心服務</h3><p>細心溝通，全程陪伴</p></article>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>專屬訂製</h3>
-        <p>依照身形與場合，打造合適的服裝。</p>
+    <section class="soft-bg">
+      <div class="section">
+        <div class="section-heading"><div class="eyebrow">Our Collection</div><h2 id="collection">旗袍作品</h2><p>融合傳統與現代，展現東方女性的優雅魅力。</p></div>
+        <div class="collection">
+          <article class="collection-card"><img loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80" alt="典雅服飾風格"><h3>典雅傳統</h3><p>經典傳承・永恆之美</p></article>
+          <article class="collection-card"><img loading="lazy" src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80" alt="柔美時尚服飾"><h3>溫柔浪漫</h3><p>柔美色調・細膩氣質</p></article>
+          <article class="collection-card"><img loading="lazy" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80" alt="現代女性服裝"><h3>現代時尚</h3><p>結合流行・展現個人風格</p></article>
+          <article class="collection-card"><img loading="lazy" src="https://images.unsplash.com/photo-1585487000160-6ebcfcek?auto=format&fit=crop&w=700&q=80" alt="訂製服裝展示"><h3>專屬訂製</h3><p>為妳量身打造</p></article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="service">
-    <h2>訂製服務</h2>
-    <p>從布料挑選、尺寸測量、版型設計到服裝製作，</p>
-    <p>為您設計適合身形、場合與個人風格的旗袍。</p>
-    <p>歡迎與我們聯繫，討論您的專屬設計需求。</p>
-  </section>
+    <section class="section" id="fabrics">
+      <div class="section-heading"><div class="eyebrow">Premium Fabrics</div><h2>精選布料</h2><p>從柔美花卉到典雅織紋，為每一件旗袍挑選合適的質感與風格。</p></div>
+      <div class="fabric-grid">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=500&q=80" alt="布料質感展示">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=80" alt="精緻布料細節">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=500&q=80" alt="柔和色系布料">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80" alt="服裝花色靈感">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=500&q=80" alt="布料色彩搭配">
+      </div>
+    </section>
 
-  <footer>
-    <p>旗袍雅集｜東方服飾美學</p>
-    <p>讓傳統工藝，融入現代生活。</p>
-  </footer>
+    <section class="soft-bg" id="service">
+      <div class="section service-layout">
+        <div><div class="eyebrow">Custom Made</div><h2>訂製服務</h2><p>從布料挑選、尺寸測量、版型設計到精緻製作，每一個細節都用心，為妳打造適合身形、場合與個人風格的旗袍。</p><a class="button" href="#contact">了解訂製流程　→</a></div>
+        <div class="steps">
+          <div class="step"><img loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80" alt="挑選布料"><strong>1．布料挑選</strong></div>
+          <div class="step"><img loading="lazy" src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=400&q=80" alt="尺寸測量"><strong>2．尺寸測量</strong></div>
+          <div class="step"><img loading="lazy" src="https://images.unsplash.com/photo-1455390582262-044c823d3d1a?auto=format&fit=crop&w=400&q=80" alt="設計規劃"><strong>3．版型設計</strong></div>
+          <div class="step"><img loading="lazy" src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=400&q=80" alt="細節製作"><strong>4．精緻製作</strong></div>
+          <div class="step"><img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=80" alt="試穿搭配"><strong>5．完成試穿</strong></div>
+        </div>
+      </div>
+    </section>
 
+    <section class="boutique">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85" alt="溫暖雅緻的服飾門市">
+      <div class="boutique-copy"><div class="eyebrow">Our Boutique</div><h2>讓優雅，走進日常</h2><p>我們相信，每一件衣裳都能訴說獨特的故事。以多年服裝製作經驗，細心陪伴妳從想法到成衣，找到最適合自己的東方風格。</p><a class="button" href="#contact">與我們聊聊　→</a></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="eyebrow">Contact Us</div><h2>聯絡我們</h2><p>想訂製一件屬於自己的旗袍嗎？歡迎先與我們討論款式與需求。</p><a class="button" href="mailto:qipao@example.com">預約訂製諮詢</a>
+      <p style="font-size:.82rem;color:#8c7372;margin:16px 0 0;">（目前為網站展示用聯絡信箱，正式使用前可再換成你的聯絡方式。）</p>
+    </section>
+  </main>
+  <footer>旗袍雅集｜東方服飾美學<br>一針一線，縫出專屬於妳的優雅。</footer>
 </body>
 </html>
