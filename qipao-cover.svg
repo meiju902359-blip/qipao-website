@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 900" role="img" aria-labelledby="title desc">
+<title id="title">旗袍雅集淡豆沙色封面插畫</title><desc id="desc">淡豆沙色東方精品店，左側穿花卉旗袍的女性，右側展示旗袍人台。</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8e6e1"/><stop offset=".52" stop-color="#fff8f1"/><stop offset="1" stop-color="#e8c6bd"/></linearGradient>
+ <linearGradient id="dress" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d99b9c"/><stop offset="1" stop-color="#a84f5b"/></linearGradient>
+ <linearGradient id="shop" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f2d6ca"/><stop offset="1" stop-color="#c99a85"/></linearGradient>
+ <pattern id="flowers" width="82" height="82" patternUnits="userSpaceOnUse"><g fill="#f9e4df" stroke="#c97b7d" stroke-width="1.5" opacity=".8"><ellipse cx="24" cy="20" rx="7" ry="13"/><ellipse cx="24" cy="20" rx="7" ry="13" transform="rotate(72 24 20)"/><ellipse cx="24" cy="20" rx="7" ry="13" transform="rotate(144 24 20)"/><ellipse cx="24" cy="20" rx="7" ry="13" transform="rotate(216 24 20)"/><ellipse cx="24" cy="20" rx="7" ry="13" transform="rotate(288 24 20)"/><circle cx="24" cy="20" r="4" fill="#c97b7d"/></g></pattern>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#75484b" flood-opacity=".18"/></filter>
+</defs>
+<rect width="1500" height="900" fill="url(#bg)"/>
+<!-- boutique architecture -->
+<rect x="900" y="0" width="600" height="900" fill="url(#shop)"/>
+<rect x="925" y="35" width="550" height="610" rx="4" fill="#f8e9df" stroke="#a77767" stroke-width="12"/>
+<g stroke="#a77767" stroke-width="9" fill="none" opacity=".8"><path d="M1060 40V640M1200 40V640M1340 40V640M925 190H1475M925 345H1475M925 500H1475"/><path d="M950 70L1450 610M1450 70L950 610" opacity=".18"/></g>
+<rect x="950" y="80" width="500" height="525" fill="#fff6ed" opacity=".48"/>
+<!-- hanging qipao mannequins -->
+<g filter="url(#shadow)">
+ <g transform="translate(965 155)"><path d="M50 0v32" stroke="#7c514b" stroke-width="8"/><path d="M35 32 Q50 20 65 32 L82 74 72 98 78 250 Q50 275 22 250 L28 98 18 74Z" fill="#a34b58"/><path d="M35 32L50 50 65 32" fill="none" stroke="#f5d8c9" stroke-width="5"/><path d="M30 100q20 18 40 0M28 145q22 18 44 0M28 190q22 18 44 0" fill="none" stroke="#eec5bb" stroke-width="3"/><path d="M35 65l-12 24m42-24 12 24" stroke="#eec5bb" stroke-width="4"/></g>
+ <g transform="translate(1100 150)"><path d="M50 0v32" stroke="#7c514b" stroke-width="8"/><path d="M35 32 Q50 20 65 32 L82 74 72 98 78 250 Q50 275 22 250 L28 98 18 74Z" fill="#f0ddd0"/><path d="M35 32L50 50 65 32" fill="none" stroke="#bd7d78" stroke-width="5"/><path d="M30 100q20 18 40 0M28 145q22 18 44 0M28 190q22 18 44 0" fill="none" stroke="#c78382" stroke-width="3"/></g>
+ <g transform="translate(1235 150)"><path d="M50 0v32" stroke="#7c514b" stroke-width="8"/><path d="M35 32 Q50 20 65 32 L82 74 72 98 78 250 Q50 275 22 250 L28 98 18 74Z" fill="#8caaa0"/><path d="M35 32L50 50 65 32" fill="none" stroke="#f4d8cb" stroke-width="5"/><path d="M30 100q20 18 40 0M28 145q22 18 44 0M28 190q22 18 44 0" fill="none" stroke="#f4d8cb" stroke-width="3"/></g>
+ <g transform="translate(1370 155)"><path d="M50 0v32" stroke="#7c514b" stroke-width="8"/><path d="M35 32 Q50 20 65 32 L82 74 72 98 78 250 Q50 275 22 250 L28 98 18 74Z" fill="#6b3745"/><path d="M35 32L50 50 65 32" fill="none" stroke="#eac3b7" stroke-width="5"/><path d="M30 100q20 18 40 0M28 145q22 18 44 0M28 190q22 18 44 0" fill="none" stroke="#eac3b7" stroke-width="3"/></g>
+</g>
+<!-- floor -->
+<path d="M0 690L1500 650V900H0Z" fill="#dfbdb2" opacity=".55"/><path d="M0 760L1500 710M0 835L1500 790" stroke="#c89588" stroke-width="3" opacity=".35"/>
+<!-- woman silhouette left -->
+<g filter="url(#shadow)">
+ <!-- hair and head -->
+ <ellipse cx="350" cy="235" rx="105" ry="132" fill="#30252a"/>
+ <ellipse cx="370" cy="245" rx="78" ry="105" fill="#f0c7b3"/>
+ <path d="M276 230Q265 100 360 90Q455 95 457 210L425 180Q390 130 340 160L300 220Z" fill="#30252a"/>
+ <path d="M291 235Q310 290 335 308L322 345 410 345 398 295Q437 255 432 195Q405 145 360 155Q315 160 291 235Z" fill="#f0c7b3"/>
+ <path d="M303 228Q332 205 355 223M375 222Q400 208 419 224" fill="none" stroke="#6d4545" stroke-width="5" stroke-linecap="round"/>
+ <path d="M350 257Q367 267 382 255M362 277Q375 285 387 275" fill="none" stroke="#b66d6e" stroke-width="4" stroke-linecap="round"/>
+ <!-- neck and torso -->
+ <path d="M330 320L324 370 285 400Q250 430 240 510L195 830Q350 880 545 830L500 510Q490 430 450 400L405 370 400 320Z" fill="url(#dress)"/>
+ <path d="M330 320L355 365 400 320 410 385 375 420 315 385Z" fill="#f4d9ce" stroke="#8f4854" stroke-width="7"/>
+ <path d="M355 365L375 420 395 365" fill="none" stroke="#a45c65" stroke-width="7"/>
+ <!-- dress embroidery -->
+ <g fill="none" stroke="#f6d8c7" stroke-width="5"><path d="M285 470q50 30 85 0t85 0M270 535q50 30 85 0t85 0M250 600q50 30 85 0t85 0M230 670q50 30 85 0t85 0"/><circle cx="310" cy="490" r="10"/><circle cx="420" cy="555" r="12"/><circle cx="335" cy="625" r="11"/><circle cx="430" cy="690" r="10"/></g>
+ <!-- arm -->
+ <path d="M455 420Q520 455 505 540L470 620Q452 646 430 620L450 525 420 465Z" fill="#f0c7b3"/>
+</g>
+<!-- floral branches -->
+<g fill="none" stroke="#9c7566" stroke-width="5" stroke-linecap="round"><path d="M30 160Q130 80 230 130T400 70M0 280Q100 210 160 250T280 205"/><path d="M1110 80Q1200 125 1290 65T1490 115"/></g>
+<g fill="#f4c8c5" stroke="#c77b7d" stroke-width="2"><g transform="translate(95 135)"><circle r="9"/><ellipse cy="-18" rx="9" ry="15"/><ellipse cy="-18" rx="9" ry="15" transform="rotate(72)"/><ellipse cy="-18" rx="9" ry="15" transform="rotate(144)"/><ellipse cy="-18" rx="9" ry="15" transform="rotate(216)"/><ellipse cy="-18" rx="9" ry="15" transform="rotate(288)"/></g><g transform="translate(190 100)"><circle r="8"/><ellipse cy="-16" rx="8" ry="13"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(72)"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(144)"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(216)"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(288)"/></g><g transform="translate(1320 85)"><circle r="8"/><ellipse cy="-16" rx="8" ry="13"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(72)"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(144)"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(216)"/><ellipse cy="-16" rx="8" ry="13" transform="rotate(288)"/></g></g>
+<!-- center soft veil so live website heading reads clearly -->
+<path d="M520 90Q730 35 920 90L930 690Q720 730 520 690Z" fill="#fff8f2" opacity=".58"/>
+</svg>
