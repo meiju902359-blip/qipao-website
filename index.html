@@ -85,15 +85,15 @@
       background-repeat: no-repeat;
       /* 保持原圖比例，避免旗袍人物被拉長或壓扁 */
       background-size: 400% auto;
-      /* 從圖片頂端開始取景，避免人物頭部被裁掉 */
-      background-position-y: 0%;
+      /* 向下調整取景位置，讓四張旗袍照片完整露出頭部 */
+      background-position-y: 40%;
     }
     .collection-photo.photo-1 { background-position-x: 0%; }
     .collection-photo.photo-2 {
-      /* 第二張使用原圖頂端取景，保留完整頭部與雨傘 */
+      /* 與其他照片使用一致的垂直取景，保留頭部 */
       background-size: 400% auto;
       background-position-x: 33.333%;
-      background-position-y: 0%;
+      background-position-y: 40%;
     }
     .collection-photo.photo-3 { background-position-x: 66.667%; }
     .collection-photo.photo-4 { background-position-x: 100%; }
