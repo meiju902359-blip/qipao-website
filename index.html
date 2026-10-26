@@ -48,16 +48,17 @@
     }
     .nav-button:hover, .button:hover { background: var(--rose-deep); transform: translateY(-1px); }
     .hero {
-      min-height: 480px; display: grid; grid-template-columns: 1fr 1fr;
-      background: linear-gradient(110deg, #f7e7e4, #fff8f3);
+      position: relative; min-height: 500px; display: block;
+      background: url("qipao-cover.svg") center / cover no-repeat;
+      background-color: #f8e6e1;
     }
-    .hero-photo {
-      min-height: 480px;
-      background:
-        linear-gradient(90deg, rgba(255,250,246,0) 65%, rgba(255,250,246,.35)),
-        url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85") center 35% / cover;
+    .hero-photo { display: none; }
+    .hero-copy {
+      min-height: 500px; width: min(48%, 680px); margin-left: 34%;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 48px clamp(20px, 4vw, 70px);
+      background: rgba(255, 248, 242, .30);
     }
-    .hero-copy { align-self: center; padding: 55px clamp(25px, 6vw, 90px); }
     .eyebrow { color: var(--rose); letter-spacing: .24em; font-size: .78rem; text-transform: uppercase; }
     h1, h2, h3, p { margin-top: 0; }
     .hero h1 { font-size: clamp(2.4rem, 4.5vw, 4.4rem); line-height: 1.25; letter-spacing: .12em; color: var(--rose-deep); margin: 12px 0; }
@@ -96,9 +97,8 @@
     @media (max-width: 900px) {
       .topbar { flex-direction: column; gap: 10px; }
       nav { gap: 12px; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-photo { min-height: 330px; }
-      .hero-copy { text-align: center; }
+      .hero { min-height: 430px; background-position: center; }
+      .hero-copy { width: 56%; margin-left: 25%; min-height: 430px; text-align: center; }
       .features { grid-template-columns: repeat(2, 1fr); }
       .feature:nth-child(2) { border-right: 0; }
       .collection { grid-template-columns: repeat(2, 1fr); }
@@ -110,7 +110,9 @@
       nav { gap: 8px 14px; }
       nav a { font-size: .85rem; }
       .nav-button { display: none; }
-      .hero-photo { min-height: 260px; }
+      .hero { min-height: 390px; background-position: 44% center; }
+      .hero-copy { width: 70%; margin-left: 15%; min-height: 390px; padding: 28px 12px; background: rgba(255,248,242,.62); }
+      .hero h1 { font-size: 2.1rem; }
       .section { padding: 48px 5%; }
       .collection { gap: 10px; }
       .collection-card img { height: 220px; }
