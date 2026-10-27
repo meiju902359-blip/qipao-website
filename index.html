@@ -76,12 +76,13 @@
     .feature h3 { color: var(--rose-deep); margin: 6px 0 2px; }
     .feature p { font-size: .9rem; color: var(--muted); margin: 0; }
     .soft-bg { background: var(--pale); }
-    .collection { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 8px; transform: translateX(-6px); }
-    .collection-card { background: #fffdfb; border: 1px solid var(--line); padding: 10px; }
+    .collection { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 8px; transform: none; align-items: start; }
+    .collection-card { min-width: 0; overflow: hidden; background: #fffdfb; border: 1px solid var(--line); padding: 10px; }
 
     /* 四款旗袍照片：從已上傳的原始設計圖中分別裁切，避免外部圖片失效或重複 */
     .collection-photo {
       height: 310px;
+      overflow: hidden;
       width: 100%;
       background-image: url("%E6%97%97%E8%A2%8D%E9%9B%85%E9%9B%86%EF%BC%9A%E6%9D%B1%E6%96%B9%E5%84%AA%E9%9B%85%E9%A2%A8%E8%8F%AF.png");
       background-repeat: no-repeat;
@@ -92,10 +93,10 @@
     }
     .collection-photo.photo-1 { background-position-x: 0%; }
     .collection-photo.photo-2 {
-      /* 第二張藍色旗袍往下調整取景，讓頭部完整顯示 */
+      /* 與其他作品使用一致的垂直取景，避免截到原圖上方文字 */
       background-size: 400% auto;
       background-position-x: 33%;
-      background-position-y: 35%;
+      background-position-y: 55%;
     }
     .collection-photo.photo-3 { background-position-x: 66.667%; }
     .collection-photo.photo-4 { background-position-x: 100%; }
