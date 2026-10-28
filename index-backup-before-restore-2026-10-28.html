@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="旗袍雅集｜東方服飾美學。以細膩剪裁與東方韻味，為每一位女性尋找專屬優雅。">
+<title>旗袍雅集｜東方服飾美學</title>
+<style>
+:root{--rose:#a75d69;--deep:#75424b;--dusty:#d8afb0;--pink:#f7e9e6;--cream:#fffaf6;--ink:#513b3d;--muted:#8a7473;--line:#ead4d1;--sage:#a8b8ac}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;line-height:1.8}
+a{color:inherit}img{max-width:100%;display:block}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:14px 5%;background:rgba(255,250,246,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.brand{text-decoration:none;color:var(--deep);white-space:nowrap}.brand strong{display:block;font-size:1.55rem;letter-spacing:.16em;line-height:1.25}.brand span{font: .65rem Georgia,serif;letter-spacing:.24em}
+nav{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}nav a{text-decoration:none;font-size:.92rem}nav a:hover{color:var(--rose)}
+.btn{display:inline-block;padding:10px 23px;border-radius:999px;background:var(--rose);border:1px solid var(--rose);color:white;text-decoration:none;transition:.2s}.btn:hover{background:var(--deep)}
+.hero{width:100%;min-height:clamp(300px,36vw,560px);aspect-ratio:auto;display:block;padding:0;background-color:#f5e2dd;background-image:url("qipao-middle-banner.png");background-position:center 38%;background-size:cover;background-repeat:no-repeat}
+.hero-copy{display:none}
+.eyebrow{color:var(--rose);letter-spacing:.22em;font-size:.78rem;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(2.3rem,4.4vw,4rem);letter-spacing:.12em;line-height:1.25;color:var(--deep);margin:12px 0}.hero p{color:var(--muted);margin-bottom:24px}
+.section{max-width:1280px;margin:auto;padding:68px 6%}.soft{background:var(--pink)}.heading{text-align:center;margin-bottom:32px}.heading h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:.12em;color:var(--deep);margin:4px 0}.heading p{color:var(--muted);margin-bottom:0}
+.story-section{position:relative;background:radial-gradient(ellipse at 8% 42%,#f5e5e2 0,transparent 27%),var(--cream)}.story-intro{max-width:1040px;margin:0 auto 38px;padding:38px 48px;display:grid;grid-template-columns:150px 1fr;gap:38px;align-items:center;background:linear-gradient(135deg,#efd5d4 0%,#e6c1c3 100%);border:1px solid #d8afb0;border-radius:8px;box-shadow:0 10px 26px #75424b12;position:relative}.story-intro:before,.story-intro:after{content:"";position:absolute;width:36px;height:36px;border-color:#c98c91;border-style:solid;pointer-events:none}.story-intro:before{top:8px;left:8px;border-width:1px 0 0 1px}.story-intro:after{bottom:8px;right:8px;border-width:0 1px 1px 0}.story-mark{width:124px;height:154px;border:0;border-radius:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--rose);font-family:serif;font-size:2.2rem;line-height:1.05;letter-spacing:.16em;background:linear-gradient(180deg,#f3dfdc,#fff8f5);position:relative}.story-mark:before{content:"";position:absolute;inset:7px;border:1px solid #d7afb0}.story-mark span{font-size:1.4rem}.story-text h3{color:var(--deep);font-size:1.5rem;letter-spacing:.1em;margin-bottom:16px}.story-text p{color:#806b6b;margin-bottom:12px;line-height:2}.story-text p:last-child{margin-bottom:0}
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.value{text-align:center;padding:24px 14px 22px;border:1px solid var(--line);border-radius:4px;background:#fffdfb;box-shadow:0 7px 20px #75424b08;transition:transform .2s,box-shadow .2s}.value:hover{transform:translateY(-3px);box-shadow:0 12px 24px #75424b12}.value .symbol{font-size:2rem;color:var(--rose)}.value h3{color:var(--deep);margin:7px 0}.value p{color:var(--muted);font-size:.9rem;margin:0}
+.showcase{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:32px;align-items:center}.showcase-image{padding:14px;background:linear-gradient(145deg,#fffdfb,#f3e1df);border:1px solid #e5c7c4;box-shadow:0 16px 36px #75424b14;position:relative}.showcase-image:before{content:"";position:absolute;inset:6px;border:1px solid #e8d2cf;pointer-events:none}.showcase-image img{width:100%;height:auto;object-fit:contain;position:relative}.showcase-copy h3{font-size:1.6rem;color:var(--deep);letter-spacing:.08em}.showcase-copy p{color:var(--muted)}
+.styles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:34px}.style{position:relative;min-height:170px;padding:25px 16px;text-align:center;display:flex;flex-direction:column;justify-content:center;border:1px solid #e8d0cd;background:linear-gradient(145deg,#fffdfb,#f7e9e6);box-shadow:0 8px 22px #75424b0a;transition:transform .25s,box-shadow .25s;overflow:hidden;border-radius:3px}.style:before{content:"";position:absolute;left:18%;right:18%;top:0;height:3px;background:var(--dusty)}.style:hover{transform:translateY(-4px);box-shadow:0 14px 28px #75424b18}.style .ornament{font-size:2.2rem;line-height:1.3;color:var(--rose)}.style h3{color:var(--deep);margin:8px 0 2px;letter-spacing:.08em}.style p{font-size:.88rem;color:var(--muted);margin:0}.style:nth-child(2){background:linear-gradient(145deg,#f9fcfc,#e7eff2)}.style:nth-child(2):before{background:#91afbd}.style:nth-child(3){background:linear-gradient(145deg,#fff9fa,#f8e6e9)}.style:nth-child(3):before{background:#d79aa8}.style:nth-child(4){background:linear-gradient(145deg,#f8fbf7,#e5eee7)}.style:nth-child(4):before{background:#829e8d}.collection-note{margin:30px auto 0;max-width:780px;text-align:center;padding:20px 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-size:.95rem}.collection-note strong{color:var(--deep)}
+.fabrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.fabric{padding:9px 9px 15px;border:1px solid var(--line);background:linear-gradient(180deg,#fffdfb,#fff7f4);text-align:center;box-shadow:0 7px 18px #75424b08;transition:transform .2s,box-shadow .2s}.fabric:hover{transform:translateY(-3px);box-shadow:0 12px 24px #75424b12}.swatch{height:130px;border:4px double #ffffffa8;background:repeating-linear-gradient(45deg,#ffffff18 0 3px,transparent 3px 10px),linear-gradient(135deg,#a23f55,#e0a6a7)}.fabric:nth-child(2) .swatch{background:radial-gradient(ellipse,#f6d8d9 0 9%,transparent 10%),linear-gradient(135deg,#c5d9e1,#6c93aa);background-size:38px 38px,auto}.fabric:nth-child(3) .swatch{background:repeating-linear-gradient(110deg,#ffffff4a 0 7px,transparent 7px 20px),linear-gradient(135deg,#f7dce1,#ce879b)}.fabric:nth-child(4) .swatch{background:radial-gradient(circle,#d8c17c 0 2px,transparent 3px),linear-gradient(135deg,#49786b,#123c35);background-size:18px 18px,auto}.fabric:nth-child(5) .swatch{background:radial-gradient(circle,transparent 30%,#cbb59a 32% 35%,transparent 37%),linear-gradient(135deg,#fffaf0,#e8d8c5);background-size:30px 30px,auto}.fabric h3{font-size:1rem;color:var(--deep);margin:10px 0 2px}.fabric p{font-size:.82rem;color:var(--muted);margin:0}
+.service{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center}.service h2{color:var(--deep);letter-spacing:.1em;font-size:2rem}.service p{color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.step{padding:20px;background:linear-gradient(145deg,#fffdfb,#fff7f4);border:1px solid #e8d0cd;box-shadow:0 6px 18px #75424b08}.step b{color:var(--deep)}.step span{display:block;color:var(--muted);font-size:.9rem}
+.contact{text-align:center;background:linear-gradient(135deg,#f7e8e5,#f0d9d7);padding:62px 20px;border-top:1px solid #e8cfcc}.contact h2{color:var(--deep);letter-spacing:.12em}.contact p{color:var(--muted)}footer{text-align:center;background:#d9b3b2;color:#633f43;padding:24px;font-size:.9rem;letter-spacing:.04em}
+@media(max-width:900px){header{flex-direction:column;gap:10px}nav{gap:10px 16px}.hero{background-position:center 35%}.hero-copy{width:min(430px,65%)}.story-intro{grid-template-columns:90px 1fr;padding:24px}.story-mark{width:84px;height:84px}.values{grid-template-columns:repeat(2,1fr)}.value:nth-child(2){border-right:0}.showcase{grid-template-columns:1fr}.showcase-image{max-width:750px;margin:auto}.styles{grid-template-columns:repeat(2,1fr)}.fabrics{grid-template-columns:repeat(3,1fr)}.service{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{aspect-ratio:auto;min-height:260px;background-size:cover;background-position:center 35%}header{padding:12px 4%}.brand strong{font-size:1.35rem}nav{gap:8px 12px}nav a{font-size:.82rem}.header-btn{display:none}.hero{min-height:300px;padding:24px 5%;background-position:center 35%}.hero-copy{width:100%;padding:23px;background:rgba(255,250,246,.87)}.hero h1{font-size:2.25rem}.section{padding:46px 5%}.story-intro{grid-template-columns:1fr;text-align:center;padding:26px 20px;gap:20px}.story-mark{margin:auto;width:100px;height:118px}.story-text h3{font-size:1.25rem}.story-text p{font-size:.95rem}.styles{gap:10px}.style{min-height:160px;padding:16px 8px}.fabrics{grid-template-columns:repeat(2,1fr)}.swatch{height:115px}.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#home"><strong>旗袍雅集</strong><span>QIPAO ELEGANCE</span></a>
+  <nav aria-label="主要導覽">
+    <a href="#home">首頁</a><a href="#story">品牌故事</a><a href="#collection">旗袍作品</a><a href="#fabrics">布料介紹</a><a href="#service">訂製服務</a><a href="#contact">聯絡我們</a>
+  </nav>
+  <a class="btn header-btn" href="#contact">預約諮詢</a>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy"><div class="eyebrow">Qipao · Elegance · Craft</div><h1>穿出東方的優雅</h1><p>傳承旗袍之美，融合現代設計。<br>一針一線，為妳縫製專屬風華。</p><a class="btn" href="#collection">探索旗袍之美　→</a></div>
+</section>
+<section class="section story-section" id="story">
+  <div class="heading"><div class="eyebrow">Our Story</div><h2>一針一線，傳承東方之美</h2><p>讓傳統旗袍走進現代生活，穿出每個人的獨特氣質。</p></div>
+  <div class="story-intro">
+    <div class="story-mark" aria-hidden="true">旗<br><span>袍</span></div>
+    <div class="story-text">
+      <h3>為優雅而生，為妳細心裁製</h3>
+      <p>旗袍的美，藏在領口的線條、盤扣的細節，也藏在布料貼合身形的溫柔裡。旗袍雅集以東方美學為靈感，融合傳統工藝與現代穿搭，陪伴每一位女性找到適合自己的款式與色彩。</p>
+      <p>無論是重要場合、日常雅著，或是想為自己留下特別的紀念，都能從款式、布料到剪裁，慢慢打造專屬於妳的風格。</p>
+    </div>
+  </div>
+  <div class="values">
+    <article class="value"><div class="symbol">❀</div><h3>東方美學</h3><p>典雅韻味，細節傳情</p></article>
+    <article class="value"><div class="symbol">✂</div><h3>細膩剪裁</h3><p>重視比例與合身細節</p></article>
+    <article class="value"><div class="symbol">♧</div><h3>多元風格</h3><p>傳統典雅，現代時尚</p></article>
+    <article class="value"><div class="symbol">♡</div><h3>貼心訂製</h3><p>依照身形與場合設計</p></article>
+  </div>
+</section>
+<section class="soft" id="collection">
+  <div class="section">
+    <div class="heading"><div class="eyebrow">Our Collection</div><h2>旗袍作品</h2><p>以柔和色彩與東方線條，展現不同年齡與場合的優雅。</p></div>
+    <div class="showcase">
+      <div class="showcase-image"><img src="旗袍雅集：東方優雅風華.png" alt="旗袍雅集東方服飾美學作品展示" loading="lazy"></div>
+      <div class="showcase-copy"><div class="eyebrow">Made with Care</div><h3>為每一位女性，找到自己的風格</h3><p>從經典酒紅、溫柔粉色，到清雅淺藍與沉穩墨綠，旗袍不只是服裝，也能呈現每個人獨特的氣質。</p><p>歡迎與我們討論喜愛的顏色、布料與穿著場合，一起規劃適合自己的旗袍。</p><a class="btn" href="#contact">洽詢訂製服務　→</a></div>
+    </div>
+    <div class="styles">
+      <article class="style"><div class="ornament">❀</div><h3>典雅傳統</h3><p>酒紅刺繡・經典韻味</p></article>
+      <article class="style"><div class="ornament">✿</div><h3>溫柔浪漫</h3><p>霧藍花卉・清新氣質</p></article>
+      <article class="style"><div class="ornament">❁</div><h3>現代時尚</h3><p>豆沙粉色・柔美俐落</p></article>
+      <article class="style"><div class="ornament">❋</div><h3>專屬訂製</h3><p>墨綠典雅・量身設計</p></article>
+    </div>
+    <div class="collection-note"><strong>每一款旗袍，都有自己的故事。</strong><br>可依照喜歡的色彩、布料、身形與穿著場合，討論專屬的設計方向。</div>
+  </div>
+</section>
+<section class="section" id="fabrics">
+  <div class="heading"><div class="eyebrow">Premium Fabrics</div><h2>精選布料</h2><p>從柔美花卉到典雅織紋，為每一件旗袍挑選合適的質感。</p></div>
+  <div class="fabrics">
+    <article class="fabric"><div class="swatch"></div><h3>酒紅花卉織錦</h3><p>華麗典雅・宴會風格</p></article>
+    <article class="fabric"><div class="swatch"></div><h3>霧藍花影</h3><p>清新溫柔・春夏氣質</p></article>
+    <article class="fabric"><div class="swatch"></div><h3>玫瑰粉緞面</h3><p>柔亮細膩・浪漫風格</p></article>
+    <article class="fabric"><div class="swatch"></div><h3>墨綠金紋提花</h3><p>沉穩復古・東方韻味</p></article>
+    <article class="fabric"><div class="swatch"></div><h3>象牙白蕾絲</h3><p>輕柔精緻・細節裝飾</p></article>
+  </div>
+</section>
+<section class="soft" id="service">
+  <div class="section service">
+    <div><div class="eyebrow">Custom Made</div><h2>專屬訂製服務</h2><p>從款式討論、布料挑選到尺寸測量與版型設計，細心陪伴每一個步驟，為妳打造適合身形、場合與個人風格的旗袍。</p><a class="btn" href="#contact">開始討論妳的旗袍　→</a></div>
+    <div class="steps">
+      <div class="step"><b>01　款式討論</b><span>了解穿著場合與喜好</span></div><div class="step"><b>02　布料挑選</b><span>選擇色彩、花樣與質感</span></div><div class="step"><b>03　尺寸與版型</b><span>依照身形規劃剪裁</span></div><div class="step"><b>04　製作與試穿</b><span>細節調整，完成專屬作品</span></div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact"><div class="eyebrow">Contact Us</div><h2>讓我們為妳設計一件旗袍</h2><p>歡迎先討論款式、布料、尺寸與適合的穿著場合。</p><p>預約諮詢方式可在網站確認後，再換成您實際使用的電話或社群連結。</p></section>
+</main>
+<footer>旗袍雅集｜東方服飾美學<br>一針一線，縫出專屬於妳的優雅。</footer>
+</body>
+</html>
