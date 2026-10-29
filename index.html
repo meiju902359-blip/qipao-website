@@ -26,6 +26,24 @@ h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(2.3rem,4.4vw,4rem);letter-spaci
 .fabrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.fabric{padding:9px 9px 15px;border:1px solid var(--line);background:#fff;text-align:center}.swatch{height:130px;border:4px double #ffffffa8;background:repeating-linear-gradient(45deg,#ffffff18 0 3px,transparent 3px 10px),linear-gradient(135deg,#a23f55,#e0a6a7)}.fabric:nth-child(2) .swatch{background:radial-gradient(ellipse,#f6d8d9 0 9%,transparent 10%),linear-gradient(135deg,#c5d9e1,#6c93aa);background-size:38px 38px,auto}.fabric:nth-child(3) .swatch{background:repeating-linear-gradient(110deg,#ffffff4a 0 7px,transparent 7px 20px),linear-gradient(135deg,#f7dce1,#ce879b)}.fabric:nth-child(4) .swatch{background:radial-gradient(circle,#d8c17c 0 2px,transparent 3px),linear-gradient(135deg,#49786b,#123c35);background-size:18px 18px,auto}.fabric:nth-child(5) .swatch{background:radial-gradient(circle,transparent 30%,#cbb59a 32% 35%,transparent 37%),linear-gradient(135deg,#fffaf0,#e8d8c5);background-size:30px 30px,auto}.fabric h3{font-size:1rem;color:var(--deep);margin:10px 0 2px}.fabric p{font-size:.82rem;color:var(--muted);margin:0}
 .service{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center}.service h2{color:var(--deep);letter-spacing:.1em;font-size:2rem}.service p{color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.step{padding:18px;background:#fffaf7;border:1px solid var(--line)}.step b{color:var(--deep)}.step span{display:block;color:var(--muted);font-size:.9rem}
 .contact{text-align:center;background:#f3dfdc;padding:55px 20px}.contact h2{color:var(--deep);letter-spacing:.12em}.contact p{color:var(--muted)}footer{text-align:center;background:#d9b3b2;color:#633f43;padding:22px;font-size:.9rem}
+
+.marketing-form-wrap{max-width:760px;margin:30px auto 0;padding:30px;background:var(--cream);border:1px solid var(--line);box-shadow:0 12px 30px #75424b10;text-align:left}
+.marketing-form-wrap h3{text-align:center;color:var(--deep);letter-spacing:.08em;margin-bottom:8px}
+.marketing-form-wrap .form-intro{text-align:center;color:var(--muted);margin-bottom:24px}
+.marketing-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{display:flex;flex-direction:column;gap:6px}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:.94rem;color:var(--deep);font-weight:600}
+.form-field input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit}
+.form-field input:focus{outline:2px solid var(--dusty);border-color:var(--rose)}
+.form-consent{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.88rem}
+.form-consent input{margin-top:8px;accent-color:var(--rose)}
+.form-submit{grid-column:1/-1;text-align:center;margin-top:4px}
+.form-submit button{font:inherit;cursor:pointer}
+.form-status{grid-column:1/-1;text-align:center;margin:0;font-size:.92rem;color:var(--deep)}
+.form-note{font-size:.8rem;color:var(--muted);text-align:center;margin:14px 0 0}
+@media(max-width:560px){.marketing-form-wrap{padding:22px 16px}.marketing-form{grid-template-columns:1fr}.form-field.full,.form-consent,.form-submit,.form-status{grid-column:1}}
+
 @media(max-width:900px){header{flex-direction:column;gap:10px}nav{gap:10px 16px}.hero{background-position:58% 25%}.hero-copy{width:min(430px,65%)}.story-intro{grid-template-columns:90px 1fr;padding:24px}.story-mark{width:84px;height:84px}.values{grid-template-columns:repeat(2,1fr)}.value:nth-child(2){border-right:0}.showcase{grid-template-columns:1fr}.showcase-image{max-width:750px;margin:auto}.styles{grid-template-columns:repeat(2,1fr)}.fabrics{grid-template-columns:repeat(3,1fr)}.service{grid-template-columns:1fr}}
 @media(max-width:560px){.hero{aspect-ratio:auto;min-height:220px;background-size:cover;background-position:center}header{padding:12px 4%}.brand strong{font-size:1.35rem}nav{gap:8px 12px}nav a{font-size:.82rem}.header-btn{display:none}.hero{min-height:480px;padding:24px 5%;background-position:58% center}.hero-copy{width:100%;padding:23px;background:rgba(255,250,246,.87)}.hero h1{font-size:2.25rem}.section{padding:46px 5%}.story-intro{grid-template-columns:1fr;text-align:center;padding:22px}.story-mark{margin:auto}.styles{gap:10px}.style{min-height:160px;padding:16px 8px}.fabrics{grid-template-columns:repeat(2,1fr)}.swatch{height:115px}.steps{grid-template-columns:1fr}}
 </style>
@@ -93,7 +111,53 @@ h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(2.3rem,4.4vw,4rem);letter-spaci
     </div>
   </div>
 </section>
-<section class="contact" id="contact"><div class="eyebrow">Contact Us</div><h2>讓我們為妳設計一件旗袍</h2><p>歡迎先討論款式、布料、尺寸與適合的穿著場合。</p><p>預約諮詢方式可在網站確認後，再換成您實際使用的電話或社群連結。</p></section>
+<section class="contact" id="contact">
+  <div class="eyebrow">Contact &amp; Updates</div>
+  <h2>訂閱優雅，感受東方之美</h2>
+  <p>留下聯絡資料，掌握旗袍新品、穿搭靈感與品牌活動。</p>
+  <div class="marketing-form-wrap">
+    <h3>顧客資訊登記</h3>
+    <p class="form-intro">誠摯邀請您加入「東方之美・旗袍雅集」資訊交流名單。</p>
+    <form class="marketing-form" id="marketingForm">
+      <div class="form-field"><label for="customerName">姓名 <span aria-hidden="true">*</span></label><input id="customerName" name="name" type="text" autocomplete="name" required placeholder="請輸入姓名"></div>
+      <div class="form-field"><label for="customerEmail">電子郵件 <span aria-hidden="true">*</span></label><input id="customerEmail" name="email" type="email" autocomplete="email" required placeholder="name@example.com"></div>
+      <div class="form-field full"><label for="customerPhone">聯絡電話（選填）</label><input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="請輸入聯絡電話"></div>
+      <label class="form-consent"><input id="marketingConsent" name="consent" type="checkbox" required><span>我同意提供上述資料，以接收「東方之美・旗袍雅集」的商品資訊、優惠及活動消息，並已閱讀個人資料蒐集告知事項。</span></label>
+      <div class="form-submit"><button class="btn" type="submit">送出資料</button></div>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite">表單版面已建立，資料接收功能設定完成後即可正式使用。</p>
+    </form>
+    <p class="form-note">我們僅會依告知目的處理您提供的資料。</p>
+  </div>
+</section>
+<script>
+(() => {
+  const form = document.getElementById('marketingForm');
+  const status = document.getElementById('formStatus');
+  // 完成 Google Apps Script 部署後，將網址填入下一行引號內。
+  const GOOGLE_SCRIPT_URL = '';
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    if (!GOOGLE_SCRIPT_URL) {
+      status.textContent = '表單外觀已完成；目前尚未連接 Google 試算表，設定接收網址後才能真正保存資料。';
+      return;
+    }
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    status.textContent = '資料送出中，請稍候……';
+    const data = new URLSearchParams(new FormData(form));
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data });
+      status.textContent = '已送出資料！若有問題，請稍後再試。';
+      form.reset();
+    } catch (error) {
+      status.textContent = '送出時發生問題，請稍後再試。';
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();
+</script>
 </main>
 <footer>旗袍雅集｜東方服飾美學<br>一針一線，縫出專屬於妳的優雅。</footer>
 </body>
