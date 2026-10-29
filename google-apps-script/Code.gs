@@ -1,4 +1,4 @@
-const SPREADSHEET_ID = '請替換成你的 Google 試算表 ID';
+const SPREADSHEET_ID = '1XQWmYdBFG0PRuSr-yZQOiay15eXS-ddl6Xzys53Pktc';
 const SHEET_NAME = '顧客名單';
 
 function doPost(e) {
