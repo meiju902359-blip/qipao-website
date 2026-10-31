@@ -134,7 +134,7 @@ h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(2.3rem,4.4vw,4rem);letter-spaci
   const form = document.getElementById('marketingForm');
   const status = document.getElementById('formStatus');
   // 完成 Google Apps Script 部署後，將網址填入下一行引號內。
-  const GOOGLE_SCRIPT_URL = https://script.google.com/macros/library/d/1fowDPL23nOBC85N5PELH43XQi0CXylUhmfaDH4tIQYFAoe8bYKGDdrvk/4
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwl_6bOER8qTE4N6_XXFqNDVtmzYa9Q7Qz6OkXY9X1JUgA4Ak0x2hx8-gG4Mhy5i2AoLQ/exec';
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
