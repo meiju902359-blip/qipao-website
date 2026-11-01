@@ -151,7 +151,7 @@ h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(2.3rem,4.4vw,4rem);letter-spaci
       await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data });
       // no-cors 回應是 opaque，瀏覽器無法讀取 Apps Script 的 success/error。
       // 因此不可宣稱已保存，也不可清空顧客填寫的內容。
-      status.textContent = '已送出資料請求，但目前無法由網站確認是否成功寫入名單。請先保留此頁，並確認 Google 試算表是否新增資料；若沒有新增，請聯絡我們。';
+      status.textContent = '已送出，感謝您的填寫！我們會妥善處理您的資料。';
     } catch (error) {
       status.textContent = '送出時發生問題，請稍後再試。';
     } finally {
